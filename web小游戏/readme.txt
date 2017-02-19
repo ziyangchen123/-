@@ -1,2 +1,3 @@
-��Ӧ������IONIC��д�ģ����Ҫ�������ڱ�Ŀ¼��ʹ�� IONIC SERVE������밲װIONIC����
-����뿴���������wwwĿ¼�£���Ϊ�Ƿ���������ҳ������ע���޸�link��ǩ��script��ǩ��·����
+本应用是用IONIC编写的，如果要运行请在本目录下使用 IONIC SERVE命令（必须安装IONIC）；
+如果想看代码请进入www目录下，因为非服务运行网页，所以注意修改link标签和script标签的路径。
+本应用分两个，2048和贪吃蛇，都是用原生js代码实现的，贪吃蛇是用canvas实现的，请在支持html5的浏览器下查看。
