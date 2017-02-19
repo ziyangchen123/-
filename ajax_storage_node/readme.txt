@@ -1,0 +1,3 @@
+1.本项目主要用于研究AJAX和Storage相关特性，如何跨域获取json，以及如何和node搭建的服务器进行通信。
+2.主要代码在guest目录下index.html和js目录下guestIndex.js文件，nodejs在coding目录下，如果要运行请
+  在该目录下使用node命令。

@@ -1,0 +1,16 @@
+/*凡是引用一下的内容则没有超链接*/
+a{
+	text-decoration: none;
+}
+.div0{
+	margin-top: 10px;
+}
+/*第一个有,后2个没有=伪类*/
+/*.ax{
+	text-decoration: none;
+}*/
+/*可否表明单独的一个*/
+/*#a0{
+	text-decoration: none;
+}
+*/
