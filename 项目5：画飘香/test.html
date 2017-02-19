@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script>
+	function img1(){
+		var imag=document.getElementById('imagbanner');
+		imag.src='images/index_18_1.jpg'
+	};
+		function img2(){
+		var imag=document.getElementById('imagbanner');
+		imag.src='images/index_18_2.jpg'
+	};
+		function img3(){
+		var imag=document.getElementById('imagbanner');
+		imag.src='images/index_18_3.jpg'
+	};
+window.onload=function(){	
+var imag=document.getElementById('imagbanner');
+	setInterval(function(){
+		console.log(4);
+		setTimeout("console.log(1)",3000);
+		setTimeout("console.log(2)",3000);
+		setTimeout("console.log(3)",3000);
+	},12000);
+
+}
+</script>
+</head>
+<body>
+<img id="imagbanner" src="images/index_18.jpg">
+
+</body>
+</html>
