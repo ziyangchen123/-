@@ -1,0 +1,828 @@
+* {
+	padding:0;
+	margin:0;
+}
+body {
+	font-size:12px;
+	width:960px;
+	margin:0 auto;
+	position:relative;
+	background:#000 url(../images/bg.gif) repeat-x 0 -720px;
+}
+ul {
+	list-style-type:none;
+}
+a {
+	text-decoration:none;
+}
+a:hover {
+	text-decoration:underline;
+}
+img {
+	border:none;
+}
+div#header{
+	width: 960px;
+	height: 89px;
+	background: url(../images/global.gif) no-repeat 0 0;
+}
+div#header div#logo{
+	width: 169px;
+	height: 89px;
+	float: left;
+}
+div#header div#logo a {
+	display:block;
+	width:169px;
+	height:89px;
+	text-indent:-9999px;
+}
+div#header div#login{
+	width: 272px;
+	height: 19px;
+	line-height: 19px;
+	padding: 4px;
+	float: left;
+}
+div#header div#login input.text{
+	border: 1px solid #878787;
+	width: 70px;
+	height: 17px;
+}
+div#header div#login input.button{
+	width: 49px;
+	height: 19px;
+	background: url(../images/global.gif)no-repeat -300px -100px;
+	cursor: pointer;
+	border: none;
+	color: #504f4f;
+}
+div#header div#lead{
+	width: 503px;
+	height: 27px;
+	float: left;
+	color: #666;
+	text-align:right;
+	line-height: 27px;
+	background: url(../images/global.gif)no-repeat 444px -101px;
+}
+div#header div#lead a{
+	color: #666;
+}
+div#header div#supnav ul li{
+	float: left;
+	height: 32px;
+	width: 76px;
+	line-height: 32px;
+	text-align: center;
+	background:url(../images/global.gif) no-repeat right -96px;
+	margin-left: -2px; 
+}
+div#header div#supnav ul li.index{
+	width: 54px;
+}
+div#header div#supnav ul li.end{
+	width: 75px;
+}
+div#header div#supnav ul li a{
+	display: block;
+	font-weight: bold;
+	color: #fff;
+}
+div#header div#supnav ul li a:hover {
+	background:url(../images/global.gif) no-repeat -380px -100px;	
+}
+div#header div#subnav{
+	height: 27px;
+	width: 791px;
+	float: left;
+}
+div#header div#subnav ul{
+	margin-left: 26px;
+}
+div#header div#subnav ul li{
+	float: left;
+	line-height: 27px;
+	height: 27px;
+	width: 85px;
+}
+div#header div#subnav a{
+	color: #fff;
+}
+div#wrap{
+	width: 960px;
+	height: 164px;
+	background: yellow;
+}
+div#wrap img{
+	display: block;
+	float: left;
+}
+div#nav{
+	width: 960px;
+	height: 69px;
+	background: url(../images/global.gif) no-repeat left -177px;
+}
+div#nav img{
+	display: block;
+	float: right;
+}
+div#nav ul{
+	width: 759px;
+	height: 25px;
+	float: right;
+	color: #fff;
+	line-height: 25px;
+	text-align: center;
+}
+div#nav ul.bottom{
+	margin-left: 12px;
+	width: 747px;
+}
+div#nav ul li{
+	display: inline;
+}
+div#nav ul li a{
+	color: #fff;
+	text-decoration: none;
+}
+div#nav ul li a.hot{
+	color: yellow;
+}
+div#content{
+	height: 1540px;
+	background:url(../images/contentbg.jpg);
+	padding:4px 10px 10px 10px;
+	position: relative;
+}
+div#content div#topic{
+	width: 303px;
+	height: 192px;
+	margin-bottom: 6px;
+	background:url(../images/bodytop.gif) no-repeat 0 -124px;
+}
+div#content div#topic h1 {
+	height: 38px;
+	background:url(../images/bodytop.gif) no-repeat 0 0;
+	padding-top: 9px;
+}
+div#content div#topic h1 a{
+	float: right;
+	font-size: 12px;
+	color: #fff;
+	text-decoration: none;
+	display: block;
+	width: 45px;
+	height: 23px;
+	background: #fff url(../images/bodytop.gif) no-repeat -241px -152px;
+	line-height: 23px;
+	text-align: center;
+	margin-right: 7px;
+}
+div#content div#topic div{
+	height: 123px;
+	background:url(../images/bodytop.gif) no-repeat 0 -331px;
+	padding: 0 15px;
+	padding-top: 6px;
+}
+div#content div#topic div img{
+	border: 1px solid #300;
+	display: block;
+	float: left;
+	margin-right: 7px;
+	width: 100px;
+	height: 112px;
+}
+div#content div#topic div h2{
+	font-size: 12px;
+	font-weight: bold;
+}
+div#content div#topic div h2 a{
+	color: #e00;
+	text-decoration: none;
+}
+div#content div#topic div p{
+	line-height: 160%;
+	margin-top: 4px;
+}
+div#content div#topic div p a{
+	color: #666;
+}
+div#content div#star{
+	width: 303px;
+	height: 196px;
+	margin-bottom: 5px;
+	background:url(../images/bodytop.gif) no-repeat 0 -120px;
+}
+div#content div#star h1 {
+	height: 38px;
+	background:url(../images/bodytop.gif) no-repeat 0 -47px;
+	padding-top: 9px;
+}
+div#content div#star h1 a{
+	float: right;
+	font-size: 12px;
+	color: #fff;
+	text-decoration: none;
+	display: block;
+	width: 45px;
+	height: 23px;
+	background: #fff url(../images/bodytop.gif) no-repeat -241px -152px;
+	line-height: 23px;
+	text-align: center;
+	margin-right: 7px;
+}
+div#content div#star div{
+	height: 133px;
+	background:url(../images/bodytop.gif) no-repeat 0 -331px;
+	padding: 0 15px;
+	padding-top: 6px;
+}
+div#content div#star div img{
+	border: 1px solid #300;
+	display: block;
+	float: left;
+	margin-right: 7px;
+	width: 100px;
+	height: 112px;
+}
+div#content div#star div h2{
+	font-size: 12px;
+	font-weight: bold;
+}
+div#content div#star div h2 a{
+	color: #e00;
+	text-decoration: none;
+}
+div#content div#star div p{
+	line-height: 160%;
+	margin-top: 4px;
+}
+div#content div#star div p a{
+	color: #666;
+}
+div#content div#update{
+	width: 303px;
+	height: 195px;
+	margin-bottom: 7px;
+	background:url(../images/bodytop.gif) no-repeat 0 -121px;
+}
+div#content div#update h1 {
+	height: 38px;
+	background:url(../images/bodytop.gif) no-repeat 0 0;
+	padding-top: 9px;
+}
+div#content div#update h1 a{
+	float: right;
+	font-size: 12px;
+	color: #fff;
+	text-decoration: none;
+	display: block;
+	width: 45px;
+	height: 23px;
+	background: #fff url(../images/bodytop.gif) no-repeat -241px -152px;
+	line-height: 23px;
+	text-align: center;
+	margin-right: 7px;
+}
+div#content div#update div{
+	height: 133px;
+	background:url(../images/bodytop.gif) no-repeat 0 -331px;
+	padding: 0 15px;
+	padding-top: 6px;
+}
+div#content div#update div img{
+	border: 1px solid #300;
+	display: block;
+	float: left;
+	margin-right: 7px;
+	width: 100px;
+	height: 112px;
+}
+div#content div#update div h2{
+	font-size: 12px;
+	font-weight: bold;
+}
+div#content div#update div h2 a{
+	color: #e00;
+	text-decoration: none;
+}
+div#content div#update div p{
+	line-height: 160%;
+	margin-top: 4px;
+}
+div#content div#update div p a{
+	color: #666;
+}
+div#content div#adv{
+	width: 401px;
+	height: 190px;
+	margin-top: 3px;
+	position: absolute;
+	top: 3px;
+	left: 322px;
+	background:url(../images/bodytop.gif) no-repeat -303px top;
+}
+
+div#content div#adv ul#sliding li{
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	filter: alpha(opacity='0');
+}
+div#content div#adv ul#sliding li.current{
+	opacity: 1;
+	filter: alpha(opacity='100');
+}
+
+div#content div#adv div#slider4 {
+	width: 370px;
+	height: 170px;
+	background: #333;
+	margin-left: 15px;
+	margin-top: 11px;
+	position: relative;
+}
+div#content div#adv div#slider4 div#paginate-slider4{
+	height:16px;
+	opacity:0.8;	
+	background:#000;
+	position:absolute;
+	top:154px;
+	left:250px;	
+}
+div#content div#adv div#slider4 div#paginate-slider4 a{
+	height:16px;
+	width:23px;
+	float:left;	
+	border:1px solid #fff;
+	border-right:none;
+	border-bottom:none;
+	text-align:center;
+	line-height:16px;
+	display:block;
+	font-family:Tahoma;
+	color:#fff;
+	font-weight:bold;
+	font-size:11px;
+	text-decoration:none;
+	font-style:normal;
+}
+div#content div#adv div#slider4 div#paginate-slider4 a:hover{
+	background:#f60;
+}
+div#content div#adv div#slider4 div#paginate-slider4 a.current{
+	background:#f60;
+}
+div#content div#adv  a.line{
+	display:block;
+	height:2px;
+	width:150px;
+	background:black;
+	position:absolute;
+	top:170px;
+	left:220px;
+}
+div#content div#focu{
+	width: 400px;
+	height: 395px;
+	margin-top: 6px;
+	position: absolute;
+	top: 197px;
+	left: 322px;
+	background:url(../images/bodytop.gif) no-repeat 0 95px;
+}
+div#content div#focu h1{
+	text-indent: -9999px;
+	height: 50px;
+	background:url(../images/bodytop.gif) no-repeat 0 -234px;	
+}
+div#content div#focu div{
+	height: 334px;
+	background: url(../images/bodytop.gif)no-repeat  -303px -309px;
+}
+div#content div#focu div h2{
+	text-align: center;
+	font-size: 14px;
+	padding-top: 5px;
+}
+div#content div#focu div h2 a{
+	color: #e00;
+	text-decoration: none;
+}
+div#content div#focu div h3{
+	text-align: center;
+	font-size: 12px;
+	color: #000;
+	margin-top: 3px;
+	height: 25px;
+	line-height: 25px;
+	border-bottom: 1px solid #ebebeb;
+	width: 361px;
+	margin: 0 auto;
+}
+div#content div#focu div h3 a {
+	color:#000;	
+}
+div#content div#focu div h3 a:hover {
+	color:#f60;	
+}
+div#content div#focu div ul{
+	width: 361px;
+	margin: 0 auto;
+	margin-top: 5px;
+	line-height: 200%;
+	color: #666;
+}
+div#content div#focu div ul li {
+	background:url(../images/bgline.gif) repeat-x left bottom;	
+}
+div#content div#focu div ul li em {
+	float:right;
+	font-style:normal;
+}
+div#content div#focu div ul li a {
+	color:#666;	
+}
+div#content div#data{
+	width: 220px;
+	height: 168px;
+	position: absolute;
+	top: 4px;
+	left: 730px;
+	background:url(../images/bodytop.gif) no-repeat left -163px;
+}
+div#content div#data h1{
+	height: 44px;
+	background:url(../images/bodytop.gif) no-repeat left -190px;
+	font-size:100%;
+	text-indent:-9999px;
+}
+div#content div#data div {
+	height:102px;
+	background:url(../images/bodytop.gif) no-repeat left -481px;
+	padding-top:7px;
+}
+div#content div#data div ul {
+	margin-left:20px;	
+	line-height:200%;
+}
+div#content div#data div ul li a {
+	color:#666;	
+}
+div#content div#da{
+	width: 220px;
+	height: 133px;
+	position: absolute;
+	top: 180px;
+	left: 730px;
+	background:url(../images/bodytop.gif) no-repeat -391px -31px;
+}
+div#content div#da img{
+	display: block;
+	margin: 0 auto;
+	margin-top: 5px;
+}
+div#content div#da img.topda{
+	margin-top: 10px;
+}
+div#content div#tyro{
+	width: 220px;
+	height: 152px;
+	position: absolute;
+	top: 318px;
+	left: 730px;
+	background:url(../images/bodytop.gif) no-repeat left -179px;
+}
+div#content div#tyro h1{
+	height:48px;
+	background:url(../images/bodytop.gif) no-repeat left -142px;	
+	text-indent:-9999px;
+}
+div#content div#tyro div{
+	height: 89px;
+	background:url(../images/bodytop.gif) no-repeat left -481px;
+}
+div#content div#tyro div ul{
+	margin-left: 20px;
+	line-height: 190%;
+	color: #666;
+}
+div#content div#tyro div ul li a{
+	color: #666;
+}
+div#content div#vc{
+	width: 220px;
+	height: 119px;
+	position: absolute;
+	top: 479px;
+	left: 730px;
+	background:url(../images/bodytop.gif) no-repeat -402px -190px;
+}
+div#content div#vc img{
+	display: block;
+	padding: 7px 0 0 5px;
+}
+div#content div#video{
+	width: 680px;
+	height: 407px;
+	margin-bottom: 7px;
+	background:#950502;
+	float: left;
+	position: relative;
+}
+div#content div#video h1{
+	height: 44px;
+	background:#950502 url(../images/body2.gif) no-repeat 0 -561px;
+}
+div#content div#video h1 a.a{
+	width: 130px;
+	height: 44px;
+	float: left;
+}
+div#content div#video h1 a.b{
+	width: 208px;
+	height: 44px;
+	float: left;
+}
+div#content div#video ul{
+	width: 641px;
+	height: 31px;
+	background:#fff url(../images/body2.gif) no-repeat 7px -520px;
+	margin-left: 8px;
+	padding-left: 20px;
+}
+div#content div#video ul li{
+	line-height: 31px;
+	display: inline;
+	color: #fff;
+}
+div#content div#video ul li a{
+	text-decoration: none;
+	color: #fff;
+}
+div#content div#video div{
+	background: #fff;
+	width: 647px;
+	height: 322px;
+	margin-left: 8px;
+	padding-left: 14px;
+}
+div#content div#video div dl{
+	width: 158px;
+	height: 152px;
+	background:url(../images/body2.gif) no-repeat -281px -362px;
+	float:left;
+	margin-top:5px;
+}
+div#content div#video div dl dt{
+	width: 122px;
+	height: 108px;
+	margin: 0 auto;
+	margin-top: 8px;
+	background:url(../images/body2.gif) no-repeat -336px -98px;
+}
+div#content div#video div dl dd{
+	width: 122px;
+	margin: 0 auto;
+	text-align: center;
+	color: #fff;
+	padding-top: 5px;
+}
+div#content div#video div dl dd a{
+	color: #fff;
+	text-decoration: none;
+}
+div#content div#video div dl dt img{
+	width: 120px;
+	height: 90px;
+	display: block;
+	margin: 0 auto;
+	padding-top: 1px;
+}
+div#content div#video span{
+	display: block;
+	height: 10px;
+	width: 680px;
+	background:url(../images/body2.gif) no-repeat 0 -551px;
+	position: absolute;
+	left: 0;
+	top: 397px;
+	text-indent: -9999px;
+}
+div#content div#channel{
+	width: 260px;
+	height: 407px;
+	margin-bottom: 7px;
+	background:url(../images/body2.gif) no-repeat -467px 308px;
+	float: left;
+}
+div#content div#channel dl{
+	background:#950502 url(../images/body2.gif) no-repeat -467px -101px;
+	height:384px;
+	padding-top: 15px;
+}
+div#content div#channel dl dd{
+	width: 248px;
+	height: 121px;
+	background:url(../images/body2.gif) no-repeat -10px -607px;
+}
+div#content div#channel dl dd.blank{
+	background:#950502;
+	height:11px;
+}
+div#content div#channel dl dd img {
+	display:block;
+	margin:0 auto;
+	padding-top:10px;
+}
+div#content div#ath{
+	width: 327px;
+	height: 393px;
+	margin-bottom: 10px;
+	background:url(../images/body2.gif) no-repeat -265px -230px;
+	float: left;
+}
+div#content div#ath h1{
+	background:url(../images/body2.gif) no-repeat 0 0;
+	height:38px;
+	padding-top:9px
+}
+div#content div#ath h1 a{
+	float: right;
+	font-size: 12px;
+	color: #fff;
+	text-decoration: none;
+	display: block;
+	width: 45px;
+	height: 23px;
+	background: #fff url(../images/bodytop.gif) no-repeat -241px -152px;
+	line-height: 23px;
+	text-align: center;
+	margin-right: 7px;
+}
+div#content div#ath div{
+	height: 325px;
+	background:#fff url(../images/body2.gif) no-repeat -10px -737px;	
+	padding:5px 20px 0 20px;
+	color: #666;
+}
+div#content div#ath div img{
+	width: 110px;
+	height: 97px;
+	border: 1px solid #333;
+	display: block;
+	float: left;
+}
+div#content div#ath div h2{
+	font-size: 12px;
+	padding-left: 120px;
+}
+div#content div#ath div p{
+	line-height:200%;	
+	padding-left:120px;
+}
+div#content div#ath div ul{
+	clear: both;
+	line-height: 220%;
+}
+div#content div#ath div ul li{
+	background:url(../images/bgline.gif) repeat-x left bottom;
+}
+div#content div#ath div ul li em{
+	float: right;
+	font-style: normal;
+}
+div#content div#ath div ul li a{
+	color: #666;
+	text-decoration: none;
+}
+div#content div#ath div ul li a:hover{
+	text-decoration:underline;
+}
+div#content div#col{
+	width: 327px;
+	height: 393px;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-bottom: 7px;
+	background:url(../images/body2.gif) no-repeat -265px -230px;
+	float: left;
+}
+div#content div#col h1{
+	background:url(../images/body2.gif) no-repeat 0 -47px;
+	height:38px;
+	padding-top:9px
+}
+div#content div#col h1 a{
+	float: right;
+	font-size: 12px;
+	color: #fff;
+	text-decoration: none;
+	display: block;
+	width: 45px;
+	height: 23px;
+	background: #fff url(../images/bodytop.gif) no-repeat -241px -152px;
+	line-height: 23px;
+	text-align: center;
+	margin-right: 7px;
+}
+div#content div#col div{
+	height: 325px;
+	background:#fff url(../images/body2.gif) no-repeat -10px -737px;	
+	padding:5px 20px 0 20px;
+	color: #666;
+}
+div#content div#col div img{
+	width: 110px;
+	height: 97px;
+	border: 1px solid #333;
+	display: block;
+	float: left;
+}
+div#content div#col div h2{
+	font-size: 12px;
+	padding-left: 120px;
+}
+div#content div#col div p{
+	line-height:200%;	
+	padding-left:120px;
+}
+div#content div#col div ul{
+	clear: both;
+	line-height: 220%;
+}
+div#content div#col div ul li{
+	background:url(../images/bgline.gif) repeat-x left bottom;
+}
+div#content div#col div ul li em{
+	float: right;
+	font-style: normal;
+}
+div#content div#col div ul li a{
+	color: #666;
+	text-decoration: none;
+}
+div#content div#col div ul li a:hover{
+	text-decoration:underline;
+}
+
+div#content div#belle{
+	width: 275px;
+	height: 393px;
+	margin-bottom: 7px;
+	background:url(../images/body2.gif) no-repeat -265px -248px;
+	float: left;
+}
+div#content div#belle h1{
+	background:url(../images/body2.gif) no-repeat 0 -383px;
+	height:38px;
+	padding-top:9px
+}
+div#content div#belle h1 a{
+	float: right;
+	font-size: 12px;
+	color: #fff;
+	text-decoration: none;
+	display: block;
+	width: 45px;
+	height: 23px;
+	background: #fff url(../images/bodytop.gif) no-repeat -241px -152px;
+	line-height: 23px;
+	text-align: center;
+	margin-right: 7px;
+}
+div#content div#belle div{
+	background:#fff url(../images/body2.gif) no-repeat -339px -737px;
+	height:330px;
+	padding-left:9px;
+}
+div#content div#belle div img{
+	display: block;
+	float: left;
+	padding-left: 10px;
+	padding-top: 12px;
+}
+div#content div#belle div img.mm{
+	padding-top: 4px;
+}
+div#content div#bbs{
+	width: 940px;
+	height: 123px;
+	position: absolute;
+	top: 1420px;
+	left: 10px;
+	background:url(../images/body2.gif) no-repeat 0 -1072px;
+}
+div#content div#bbs img{
+	display: block;
+	padding-top: 9px;
+	margin: 0 auto;
+}
+div#footer{
+	height: 34px;
+	line-height:32px;
+	text-indent:780px;
+	background:url(../images/global.gif) no-repeat 0 -140px;
+}
