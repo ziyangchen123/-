@@ -1,0 +1,41 @@
+#sidebar{
+	width:266px;
+	height:850px;
+	background:#fff;
+	border-right:1px solid #ccc;
+	float:left;
+	
+}
+#sidebar embed{
+	display:block;
+	width:220px;
+	height:200px;
+	margin:0 auto;
+	margin-top:20px;
+}
+#content{
+	width:600px;
+	height:850px;
+	background:#fff;
+	float:right;
+}
+#content h1{
+	background:url(../images/lianxi.gif)no-repeat;
+	width:89px;
+	height:25px;
+	font-size:100%;
+	text-indent:-1000em;
+	margin-top:20px;
+	margin-left:16px;
+}
+#content ul{
+	list-style-type:square;
+	line-height:180%;
+	margin-left:50px;
+	margin-top:10px;
+}
+#content p{
+
+	padding-top:30px;
+	text-align:center;
+}

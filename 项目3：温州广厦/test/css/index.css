@@ -1,0 +1,161 @@
+
+#sidebar{
+	width:251px;
+	height:490px;
+	background:#fff url(../images/weline.gif) no-repeat right 55%;
+	float:left;
+}
+#sidebar h1{
+	background:url(../images/wel.gif)no-repeat;
+	width:123px;
+	height:35px;
+	font-size:100%;
+	text-indent:-1000em;
+	margin-top:20px;
+	margin-left:16px;
+}
+#sidebar img{
+	display:block;
+	margin-left:17px;
+}
+
+#sidebar ul{
+	padding-top:10px;
+	line-height:180%;
+	text-indent:20px;
+	margin-left:20px;
+
+	
+}
+#sidebar ul li a{
+	display:inline-block;
+	width:65px;
+	height:11px;
+	background:url(../images/more.gif)no-repeat left center;
+	
+}
+#sidebar ul li.line{
+	border-bottom:1px solid #999;
+	margin-left:20px;
+	margin-right:50px;
+	margin-bottom:10px;
+
+	height:15px;
+}
+#news{
+	width:313px;
+	height:300px;
+	background:#fff;
+	float:left;
+	
+}
+#news h1{
+	background:url(../images/news.gif)no-repeat;
+	width:123px;
+	height:27px;
+	font-size:100%;
+	text-indent:-1000em;
+	margin-top:20px;
+	margin-left:20px;
+}
+#news ul{
+	line-height:150%;
+	margin-top:10px;
+	background:url(../images/weline.gif) repeat-y right;
+	
+}
+#news ul li{
+	padding-left:15px;
+}
+#news ul li.date{
+	color:orange;
+	font-weight:bold;
+	background:url(../images/ico.gif)no-repeat left center;
+}
+#news ul li a{
+	display:inline-block;
+	width:65px;
+	height:11px;
+	background:url(../images/more.gif)no-repeat left center;
+	margin-top:10px;
+	
+}
+#about{
+	width:303px;
+	height:300px;
+	background:#fff;
+	float:left;
+
+}
+#about h1{
+	background:url(../images/about.gif)no-repeat;
+	width:127px;
+	height:26px;
+	font-size:100%;
+	text-indent:-1000em;
+	margin-top:20px;
+	margin-left:20px;
+}
+#about img{
+	display:block;
+	margin-left:17px;
+}
+#about p{
+	width:240px;
+	margin-left:23px;
+	color:#666;
+	line-height:150%;
+	
+}
+#about a{
+	display:inline-block;
+	width:65px;
+	height:11px;
+	background:url(../images/more.gif)no-repeat left center;
+	margin-left:22px;
+	margin-top:8px;
+	
+}
+#estate{
+	width:616px;
+	height:190px;
+	background:#fff;
+	float:left;
+	
+}
+#estate #escon{
+	width:533px;
+	height:190px;
+	
+	margin-left:35px;
+	border-top:1px solid #ccc;
+}
+#estate #escon img{
+	padding-top:15px;
+	display:black;
+	float:left;
+}
+#estate #escon dl{
+	float:left;
+	width:280px
+}
+#estate #escon dl dt{
+	background:url(../images/estate1.gif)no-repeat;
+	width:117px;
+	height:30px;
+	font-size:100%;
+	text-indent:-1000em;
+	margin-top:20px;
+	margin-left:20px;
+}
+#estate #escon dl dd{
+	padding:2px 0 0 20px;
+}
+#estate #escon dl dd a{
+	display:inline-block;
+	width:65px;
+	height:11px;
+	background:url(../images/more.gif)no-repeat left center;
+	
+	margin-top:8px;
+}

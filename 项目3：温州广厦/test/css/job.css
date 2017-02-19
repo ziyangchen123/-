@@ -1,0 +1,69 @@
+#sidebar{
+	width:266px;
+	height:850px;
+	background:#fff;
+	border-right:1px solid #ccc;
+	float:left;
+	
+}
+#sidebar embed{
+	display:block;
+	width:220px;
+	height:200px;
+	margin:0 auto;
+	margin-top:20px;
+}
+#content{
+	width:600px;
+	height:850px;
+	background:#fff;
+	float:right;
+}
+#content h1{
+	background:url(../images/job.gif)no-repeat;
+	width:127px;
+	height:26px;
+	font-size:100%;
+	text-indent:-1000em;
+	margin-top:20px;
+	margin-left:16px;
+}
+#content table{
+	width:90%;
+	background:#ccc;
+	margin-left:20px;
+	margin-top:10px;
+	border-collapse:collapse;
+
+}
+#content table th,#content table td{
+	height:25px;
+	line-height:25px;
+	text-align:center;
+	border:1px solid #ccc;
+}
+#content table th{
+	background:#eee;
+	font-weight:normal;
+}
+#content table tr{
+	background:#fff;
+}
+#content table tr:hover{
+	background:#cc0;
+}
+#content a{
+	color:#06f;
+	text-decoration:none;
+	
+}
+#content  a hover{
+	color:#06f;
+	text-decoration:underline;
+	
+}
+#content p{
+
+	padding-top:30px;
+	text-align:center;
+}
