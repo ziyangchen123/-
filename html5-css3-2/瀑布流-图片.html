@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<title>瀑布流效果</title>
+<style type="text/css">
+#box
+{
+	width:100%;
+}
+.item
+{
+	float:left;
+	border-radius:5px;
+}
+@-webkit-keyframes glow 
+{
+	0% {-webkit-box-shadow: 0 0 12px rgba(72, 106, 170, 0.5);border-color: rgba(160, 179, 214, 0.5); }
+	100% {-webkit-box-shadow: 0 0 12px rgba(72, 106, 170, 1.0), 0 0 18px rgba(0, 140, 255, 1.0); border-color: rgba(160, 179, 214, 1.0); }
+}
+@-moz-keyframes glow 
+{
+	0% {-moz-box-shadow: 0 0 12px rgba(72, 106, 170, 0.5);border-color: rgba(160, 179, 214, 0.5); }
+	100% {-moz-box-shadow: 0 0 12px rgba(72, 106, 170, 1.0), 0 0 18px rgba(0, 140, 255, 1.0); border-color: rgba(160, 179, 214, 1.0); }
+}
+img
+{
+	padding:3px; border:1px solid #beceeb; background-color:white;
+	-moz-box-shadow: 0 0 8px rgba(72, 106, 170, 0.5); -webkit-box-shadow: 0 0 8px rgba(72, 106, 170, 0.5);
+	box-shadow: 0 0 8px rgba(72, 106, 170, 0.5);
+}
+img:hover 
+{ 
+	background-color:#f0f3f9;
+	-webkit-animation-name: glow; -webkit-animation-duration: 1s;
+	-webkit-animation-iteration-count: infinite; -webkit-animation-direction: alternate;
+	-webkit-animation-timing-function: ease-in-out;	
+	-moz-animation-name: glow; -moz-animation-duration: 1s;
+	-moz-animation-iteration-count: infinite; -moz-animation-direction: alternate;
+	-moz-animation-timing-function: ease-in-out;	
+}
+</style>
+</head>
+<body>
+	<div id="box">
+    	<div class="item"><img src="images/dim1.jpg" /></div>
+		<div class="item"><img src="images/dim2.jpg" /></div>
+        <div class="item"><img src="images/dim3.jpg" /></div>
+        <div class="item"><img src="images/dim4.jpg" /></div>
+        <div class="item"><img src="images/dim5.jpg" /></div>
+        <div class="item"><img src="images/dim6.jpg" /></div>
+        <div class="item"><img src="images/dim7.jpg" /></div>
+        <div class="item"><img src="images/dim8.jpg" /></div>
+        <div class="item"><img src="images/dim1.jpg" /></div>
+		<div class="item"><img src="images/dim2.jpg" /></div>
+        <div class="item"><img src="images/dim3.jpg" /></div>
+        <div class="item"><img src="images/dim4.jpg" /></div>
+        <div class="item"><img src="images/dim5.jpg" /></div>
+        <div class="item"><img src="images/dim6.jpg" /></div>
+        <div class="item"><img src="images/dim7.jpg" /></div>
+        <div class="item"><img src="images/dim8.jpg" /></div>
+    </div>
+    
+</body>
+<script src="js/jquery-1.6.1.js"></script>
+<script src="js/jquery.masonry.min.js"></script>
+<script>
+$(function()
+{
+	
+	var $box = $('#box');
+	
+	$box.imagesLoaded( function()
+	{
+	  $container.masonry(
+	  {
+		itemSelector : '.item'
+	  });
+	});
+
+	
+});
+</script>
+</html>

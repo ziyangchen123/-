@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="author" content="shuzhou" />
+<title>jQuery截取文本长度</title>
+<script type="text/javascript" src="js/jquery-1.6.1.js"></script>
+<script>
+$(function() 
+{
+	var obj = [];
+	var oldVal;
+	var newVal;
+	var element;
+	$("*[maxlen]").each(function(index) 
+	{
+		obj[index] = $(this);
+	});
+	
+	for (var i = 0; i < obj.length; i++)
+	{
+		element = obj[i];
+		oldVal = element.text();
+		element.attr("title", oldVal);
+		newVal = oldVal.substr(0, getObjAttr(element, "maxlen"));
+		element.html(newVal);
+	}
+	
+
+	/**
+ 	* 获取对象属性值
+ 	* @param {Object} obj 表单对象
+	 * @param {Object} attr 需要获取的属性值
+	 */
+	function getObjAttr(obj, attr)
+	{
+		var attrVal = obj.attr(attr);
+		// 属性如果未定义 返回null
+		if ("undefined" == typeof(attrVal))
+		{
+			return null;
+		}
+		if ("" == attrVal.trim() || null == attrVal)
+		{
+			return null;
+		}
+		else
+		{
+			return attrVal;
+		}
+	}
+
+});
+</script>
+</head>
+
+<body>
+
+	<p maxlen="12">
+    	很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的
+        文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本
+    </p>
+    
+    <a maxlen="20">
+    	很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的
+        文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很
+    </a>
+	<br/><br/>
+    <font maxlen="15">
+    	很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的
+        文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很
+    </font>
+    
+    <br/><br/>
+    <i>
+    	很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的
+        文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很长的文本很
+    </i>
+</body>
+</html>

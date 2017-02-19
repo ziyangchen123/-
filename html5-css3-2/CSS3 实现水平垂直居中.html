@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>水平垂直居中</title>
+	
+<style type="text/css">
+body {
+	background: #555 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAB9JREFUeNpi/P//PwM6YGLAAuCCmpqacC2MRGsHCDAA+fIHfeQbO8kAAAAASUVORK5CYII=);
+	font: 13px 'Lucida sans', Arial, Helvetica;
+	color: #eee;
+	text-align: center;
+}
+
+.wrapper
+{
+	width:500px; height:200px; padding:15px;
+	margin:150px auto;
+	background:#444; background:rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+	box-shadow:0 1px 1px rgba(0, 0, 0, 0.4) inset, 0 1px 0 rgba(255, 255, 255, 0.2);
+
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  
+}
+.wrapper span
+{
+	display:block; width:85px; height:20px;
+	background:#999; padding-top:5px;
+}
+</style>
+</head>
+<body>
+    <div class="wrapper">
+    	<span class="horizontalCenter">水平垂直居中</span>
+		<span class="horizontalCenter">水平垂直居中</span>
+		<span class="horizontalCenter">水平垂直居中</span><span class="horizontalCenter">水平垂直居中</span>
+		<span class="horizontalCenter">水平垂直居中</span>
+		<span class="horizontalCenter">水平垂直居中</span>
+		<span class="horizontalCenter">水平垂直居中</span>
+		
+    </div>
+</div>
+</body>
+</html>

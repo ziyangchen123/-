@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>HTML5 拖放</title>
+<style>
+.box
+{
+	width:480px;height:100px;padding:10px;border:1px solid #aaaaaa;
+}
+</style>
+<script>
+function allowDrop(ev)
+{
+	ev.preventDefault();
+}
+
+function drag(ev)
+{
+	ev.dataTransfer.setData("xt",ev.target.id);
+}
+
+function drop(ev)
+{
+	ev.preventDefault();
+	var data=ev.dataTransfer.getData("xt");
+	ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+
+<body>
+
+	<div class="box" ondrop="drop(event)" ondragover="allowDrop(event);"></div>
+    <br/>
+
+	<!-- 为了使元素可拖动，把 draggable 属性设置为 true -->
+	<img id="drag1" src="images/40Ly3VB.jpg" draggable="true" ondragstart="drag(event);" width="480px" height="100px"/>
+
+   
+</body>
+</html>

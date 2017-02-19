@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HTML5 画布</title>
+<style>
+canvas
+{
+	border:1px solid #ccc;
+}
+</style>
+<script>
+function draw()
+{
+	var c = document.getElementById("myCanvas");
+	var cxt = c.getContext("2d");
+	cxt.fillStyle = "#FF0000";
+	cxt.fillRect(20,12,150,75);
+}
+
+function draw1()
+{
+	var c = document.getElementById("myCanvas1");
+	var cxt = c.getContext("2d");
+	cxt.moveTo(10, 10);
+	cxt.lineTo(80, 80);
+	cxt.lineTo(120, 10);
+	cxt.lineTo(180, 70);
+	cxt.stroke();
+}
+
+function draw2()
+{
+	var c = document.getElementById("myCanvas2");
+	var cxt = c.getContext("2d");
+	cxt.fillStyle = "#FF00FF";
+	cxt.beginPath();
+	cxt.arc(100, 50, 30, 0, Math.PI*2, true);// X轴距离, Y轴距离, 圆的半径......
+	cxt.closePath();
+	cxt.fill();
+}
+
+function draw3()
+{
+	var c = document.getElementById("myCanvas3");
+	var cxt = c.getContext("2d");
+	var grd = cxt.createLinearGradient(0,0,200,100);
+	grd.addColorStop(0, "#FF0000");
+	grd.addColorStop(1, "#FF00FF");
+	cxt.fillStyle = grd;
+	cxt.fillRect(0,0,200,100);
+}
+
+function draw4()
+{
+	var c = document.getElementById("myCanvas4");
+	var cxt = c.getContext("2d");
+	var img = new Image();
+	img.src = "images/testC.png";
+	cxt.drawImage(img, 30, 0);
+}
+
+</script>
+</head>
+
+<body>
+
+	<canvas id="myCanvas" width="200" height="100"></canvas> <input type="button" onClick="draw();" value="绘制红色矩形"/>
+    <hr/>
+    <canvas id="myCanvas1" width="200" height="100"></canvas> <input type="button" onClick="draw1();" value="绘制直线"/>
+    <hr/>
+    <canvas id="myCanvas2" width="200" height="100"></canvas> <input type="button" onClick="draw2();" value="绘制圆形"/>
+	<hr/>
+    <canvas id="myCanvas3" width="200" height="100"></canvas> <input type="button" onClick="draw3();" value="绘制渐变"/>
+    <hr/>
+    <canvas id="myCanvas4" width="200" height="130"></canvas> <input type="button" onClick="draw4();" value="载入图形"/>
+    
+</body>
+</html>

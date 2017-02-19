@@ -1,0 +1,309 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<title>瀑布流效果</title>
+<style type="text/css">
+#pagebox
+{
+	width:100%;
+}
+.itembox
+{
+	float:left; width:200px;
+	background:rgb(215, 215, 215); padding:5px;
+	border-radius:5px; margin:10px;
+	color:rgb(85, 34, 111);
+}
+div.more
+{
+	width: 100%; height: 22px; margin-left: auto; margin-top:15px;
+	margin-right: auto;
+	border:1px solid rgb(190,190,190); cursor: pointer;
+	background-color:rgb(155,155,155); text-align: center; padding-top: 7px;
+	font-size: 14px; color: #aaa;
+	text-shadow:1px 0px 0 rgba(220,220,220,0.9);
+	-webkit-border-radius:3px; -moz-border-radius:3px; -o-border-radius:3px; border-radius:3px;
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 90%, from(rgba(252,252,252, 0.8)), to(rgba(234,234,234, .9)));
+	background-image: -moz-linear-gradient(rgba(252,252,252, 0.8) 0%, rgba(234,234,234, .9) 90%);
+
+}
+div.more:hover
+{
+	border:1px solid rgb(150,150,150); background-color:rgb(122, 122, 122); text-decoration:none;
+	/* -- 文本阴影 渐变 -- */
+	text-shadow:1px 0px 0 rgba(50,50,50.9);
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 90%, from(rgba(250,250,250, 0.8)), to(rgba(210,210,210, .9)));
+	background-image: -moz-linear-gradient(rgba(250,250,250, 0.8) 0%, rgba(210,210,210, .9) 90%);
+}
+
+div.more:active
+{
+	border:1px solid rgb(150,150,150); background-color:rgb(100, 100, 100); text-decoration:none;
+	/* -- 文本阴影 渐变 -- */
+	text-shadow:1px 0px 0 rgba(50,50,50.9);
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 90%, from(rgba(230,230,230, 0.8)), to(rgba(190,190,190, .9)));
+	background-image: -moz-linear-gradient(rgba(230,230,230, 0.8) 0%, rgba(190,190,190, .9) 90%);
+}
+span.hbox
+{
+	width:100%; height:0px; background-color:#000; position:absolute; bottom:0; left:0;
+	text-align:center; color:#fff; font-size:16px; font-family:"微软雅黑";
+	font-weight:bolder; letter-spacing:2px; overflow:hidden;
+	filter:alpha(opacity=70);  -moz-opacity:0.7;  -khtml-opacity: 0.7;  opacity: 0.7;
+}
+</style>
+</head>
+<body>
+	<div class="more" id="addedBefore">更多, 元素添加在之前...</div>
+	<div id="pagebox">
+    	<div class="itembox" onMouseOver='showST(this);' onMouseOut='hideST(this);'>
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+            测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	<span class="hbox"><br/>文字文字文字</span>
+        </div>
+    	<div class="itembox" onMouseOver='showST(this);' onMouseOut='hideST(this);'>
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	<span class="hbox"><br/>文字文字文字</span>
+        </div>
+    	<div class="itembox" onMouseOver='showST(this);' onMouseOut='hideST(this);'>
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+            测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+            测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+            测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+            测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	<span class="hbox"><br/>文字文字文字</span>
+        </div>
+    	<div class="itembox" onMouseOver='showST(this);' onMouseOut='hideST(this);'>
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+            测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+            测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	<span class="hbox"><br/>文字文字文字</span>
+        </div> 
+    	<div class="itembox" onMouseOver='showST(this);' onMouseOut='hideST(this);'>
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+            测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+            测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+            测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+            测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+            测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+            测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	<span class="hbox"><br/>文字文字文字</span>
+        </div>
+    	<div class="itembox" onMouseOver='showST(this);' onMouseOut='hideST(this);'>
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+            测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+            测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	<span class="hbox"><br/>文字文字文字</span>
+        </div>
+    	<div class="itembox" onMouseOver='showST(this);' onMouseOut='hideST(this);'>
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+            测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+            测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        </div>
+    	<div class="itembox" onMouseOver='showST(this);' onMouseOut='hideST(this);'>
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	<span class="hbox"><br/>文字文字文字</span>
+        </div>
+    	<div class="itembox" onMouseOver='showST(this);' onMouseOut='hideST(this);'>
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	<span class="hbox"><br/>文字文字文字</span>
+        </div>
+    	<div class="itembox" onMouseOver='showST(this);' onMouseOut='hideST(this);'>
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	<span class="hbox"><br/>文字文字文字</span>
+        </div>
+    	<div class="itembox" onMouseOver='showST(this);' onMouseOut='hideST(this);'>
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	<span class="hbox"><br/>文字文字文字</span>
+        </div>
+    	<div class="itembox" onMouseOver='showST(this);' onMouseOut='hideST(this);'>
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+            测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	<span class="hbox"><br/>文字文字文字</span>
+        </div>
+    	<div class="itembox" onMouseOver='showST(this);' onMouseOut='hideST(this);'>
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	<span class="hbox"><br/>文字文字文字</span>
+        </div>
+    	<div class="itembox" onMouseOver='showST(this);' onMouseOut='hideST(this);'>
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	<span class="hbox"><br/>文字文字文字</span>
+        </div>
+    	<div class="itembox" onMouseOver='showST(this);' onMouseOut='hideST(this);'>
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+       		测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	<span class="hbox"><br/>文字文字文字</span>
+        </div>
+    	<div class="itembox" onMouseOver='showST(this);' onMouseOut='hideST(this);'>
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+            测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	<span class="hbox"><br/>文字文字文字</span>
+        </div>
+    	<div class="itembox" onMouseOver='showST(this);' onMouseOut='hideST(this);'>
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+            测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+            测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	<span class="hbox"><br/>文字文字文字</span>
+        </div>
+    	<div class="itembox" onMouseOver='showST(this);' onMouseOut='hideST(this);'>
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+            测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	<span class="hbox"><br/>文字文字文字</span>
+        </div>
+    	<div class="itembox" onMouseOver='showST(this);' onMouseOut='hideST(this);'>
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	<span class="hbox"><br/>文字文字文字</span>
+        </div>
+    	<div class="itembox" onMouseOver='showST(this);' onMouseOut='hideST(this);'>
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+            测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+            测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	<span class="hbox"><br/>文字文字文字</span>
+        </div>
+    	<div class="itembox" onMouseOver='showST(this);' onMouseOut='hideST(this);'>
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+            测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	<span class="hbox"><br/>文字文字文字</span>
+        </div>
+    	<div class="itembox" onMouseOver='showST(this);' onMouseOut='hideST(this);'>
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+            测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	<span class="hbox"><br/>文字文字文字</span>
+        </div>
+    	<div class="itembox" onMouseOver='showST(this);' onMouseOut='hideST(this);'>
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+            测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	<span class="hbox"><br/>文字文字文字</span>
+        </div>
+    	<div class="itembox" onMouseOver='showST(this);' onMouseOut='hideST(this);'>
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+            测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	<span class="hbox"><br/>文字文字文字</span>
+        </div>
+    	<div class="itembox" onMouseOver='showST(this);' onMouseOut='hideST(this);'>
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+            测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	<span class="hbox"><br/>文字文字文字</span>
+        </div>
+    	<div class="itembox" onMouseOver='showST(this);' onMouseOut='hideST(this);'>
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+            测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+            测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+            测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+            测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+            测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	<span class="hbox"><br/>文字文字文字</span>
+        </div> 
+    	<div class="itembox" onMouseOver='showST(this);' onMouseOut='hideST(this);'>
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+            测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+            测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+            测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流测试瀑布流
+        	<span class="hbox"><br/>文字文字文字</span>
+        </div>
+    </div>
+    <div class="more" id="addedAfter">更多, 元素追加在之后...</div>
+</body>
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/jquery.masonry.min.js"></script>
+<script>
+$(function()
+{
+	var $pagebox = $('#pagebox');
+	$pagebox.masonry(
+	{
+	  itemSelector: '.itembox',
+	  columnWidth: 10,	// 列宽 类似于CSS 的 margin
+	  isAnimated: true	// 动画
+	});
+	
+	$('#addedBefore').click(function() 
+	{
+		appendNodeFore($pagebox, 5);
+	});
+	
+	$('#addedAfter').click(function()
+	{
+		appendNodeLater($pagebox, 5);
+	});
+	
+	/**
+	 * 追加在之前
+	 */
+	function appendNodeFore($pagebox, count)
+	{	
+		var $boxArray = [];
+		
+		for (var i = 0; i < count; i++) 
+		{
+			$boxArray.push("<div class='itembox' onMouseOver='showST(this);' onMouseOut='hideST(this);' style='height:" + getRandomNumber() + "px'>瀑布流<span class='hbox'><br/>浮层</span></div>");
+		}
+		
+		$pagebox.prepend($boxArray).masonry('reload');
+	}
+	
+	/**
+	 * 添加在之后
+	 */
+	function appendNodeLater($pagebox, count)
+	{
+		var $boxArray = [];
+		
+		for (var i = 0; i < count; i++) 
+		{
+			$boxArray.push("<div class='itembox' onMouseOver='showST(this);' onMouseOut='hideST(this);' style='height:" + getRandomNumber() + "px'>瀑布流<span class='hbox'><br/>浮层</span></div>");
+		}
+		
+		$pagebox.append( $boxArray ).masonry('reload');
+	}
+
+	function getRandomNumber()
+	{
+		var  randomNumber = Math.random() * 120 + 130;
+		return randomNumber;
+	}
+});
+
+function showST(obj)
+{
+	$(obj).find('span').stop(true).animate({height:'100%'}, 520);
+}
+function hideST(obj)
+{
+	$(obj).find('span').stop(true).animate({height:'0px'}, 520);
+}
+
+</script>
+</html>

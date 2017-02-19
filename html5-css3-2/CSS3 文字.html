@@ -1,0 +1,213 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="author" content="shuzhou" />
+<title>文字处理</title>
+<style>
+.desc
+{
+	width:350px; letter-spacing:1px; padding:5px;
+}
+h2
+{
+	font-family:"微软雅黑"; 
+}
+
+.insetText, .text3D, .neonText, .stroke, .strokeTransparent, .anaglyphic, .rotate, .emboss, .blury, .trueInset, .gradient
+{
+	background-color:rgb(213, 210, 193);
+}
+.letterpressText
+{
+	background-color:rgb(69, 69, 69);
+}
+.embossing
+{
+	background-color:rgb(106, 133, 175);
+}
+.embossing2
+{
+	background-color:rgb(201, 201, 201);
+}
+.grungeBG
+{
+	background-color:#000;
+}
+
+
+
+.insetText h2
+{
+	color: #f00; text-shadow:1px 1px 0px #212121;
+}
+
+.text3D h2
+{
+	color:#fff; text-shadow:0px 1px 0px #ccc, 0px 2px 0px #c9c9c9, 0px 3px 0px #bbb, 0px 4px 0px #b9b9b9,
+	 0px 5px 0px #aaa, 0px 6px 0px rgba(0, 0, 0, 0.1), 0px 0px 5px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.3), 
+	 0px 3px 5px rgba(0, 0, 0, 0.2), 0px 5px 10px rgba(0, 0, 0, 0.25);
+}
+.neonText h2
+{
+	color:#fff; text-shadow:0px 0px 5px #ccc, 0px 0px 10px #ccc, 0px 0px 15px #ccc,
+		0px 0px 20px #095816, 0px 0px 25px #095816, 0px 0px 30px #095816, 0px 0px 50px #095816, 
+		0px 0px 80px #095816, 0px 0px 100px;
+}
+.letterpressText h2
+{
+	color:#222; text-shadow:0px 2px 3px #555;
+}
+.embossing h2
+{
+	color:#fff; text-shadow:0px -1px 0px #374683;
+}
+.embossing2 h2
+{
+	color:#737373; text-shadow:0px 1px 0px #e5e5ee;
+}
+.stroke h2
+{
+	color: #c00; -webkit-text-stroke: 1px #000; 
+}
+.strokeTransparent h2
+{
+	-webkit-text-stroke: 1px #000; -webkit-text-fill-color: transparent;
+}
+.anaglyphic h2
+{
+	color: rgba(255, 100, 140, 0.5); text-shadow: 3px 3px 0 rgba(80, 255, 0, 0.8);
+}
+.rotate  h2
+{
+	-webkit-transform: rotate(-35deg); -ms-transform: rotate(-35deg);
+	-0-transform: rotate(-35deg); -moz-transform: rotate(-35deg);
+	transform: rotate(-35deg); filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+.emboss h2
+{
+	color:#ccc; text-shadow:-1px -1px #fff, 1px 1px #333;
+}
+.blury h2
+{
+	color:transparent; text-shadow:0px 0px 4px #f36;
+}
+.backgroundClip h2
+{
+	font-weight:900; background:url(images/3.jpg) no-repeat left top;
+	-webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.trueInset h2
+{
+	background: #666; background: #666;
+	-webkit-background-clip: text; -moz-background-clip: text;
+	background-clip: text; color: transparent;
+	text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5);
+}
+h2.grunge
+{
+	position:relative; color:#f06369;
+	text-shadow:0px 0px 2px rgba(255, 255, 255, 0.3), -1px -1px 0px #fcfcfc, 1px 1px 0px #ccc;
+}
+h2.grunge span
+{
+	position:absolute; display:block; top:0; left:0; height:100%; 
+	width:100%; background:url(images/ground.png);
+}
+.gradient h2
+{
+	position:relative; text-shadow:1px 0px 4px #006; font-family:'Airal';
+}
+.gradient h2 a
+{
+	position:absolute; top:0; azimuth:2; color:#f36902;
+	-webkit-mask-image:webkit-gradient(linear, left top,left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+	text-decoration:none;
+}
+.gradient h2:after
+{
+	content:"Gradient Effect(渐变效果)"; color:#000; text-shadow:1px 1px 1px #600;
+}
+
+</style>
+</head>
+
+<body>
+	<table border="1px" cellpadding="5" cellspacing="5" style="width:100%;">
+    	<tr>
+        	<td class="desc">
+            	内阴影的文字效果是利用text-shadow属性根据不同光源制作出来的。需要注意三个颜色的配置问题，
+                背景色，前景色，阴影色需要采用有一定的亮度对比色，这样效果更佳，请看下面的效果。
+            </td>
+            <td class="insetText"><h2>Inset Text(内阴影效果)</h2></td>
+            <td class="desc">
+            	这里没有使用其他的html标签，只是多次应用了CSS3中的text-shadow属性，进行多次阴影设置，并设置不同的阴影色，从而达到一个立体的文字效果。
+            </td>
+            <td class="text3D"><h2>3D Text(3D立体效果)</h2></td>
+        </tr>
+    	<tr>
+        	<td class="desc">
+            	霓虹灯效果主要是多次使用text-shadow属性制作阴影，只是这里有一点需要注意，在制作阴影时不设置
+            	任何X轴和Y轴的值，只是设置其模糊半径值，并且每次的blur半径取值不同，而且后面的值总是比前面的值大。
+            </td>
+            <td class="neonText"><h2>Neon Lights Effect(霓虹灯效果)</h2></td>
+            <td class="desc">
+            	Letterpress Effect和前面的Inset Effect效果很相似，不同之处是Lefferpress使用模糊值产生一种立体效果。
+                这种效果一般配合在有纹理的背景下使用。	
+            </td>
+            <td class="letterpressText"><h2>Letterpress Effect<br />(凸版效果)</h2></td>
+        </tr>
+    	<tr>
+        	<td colspan="4" align="center" height="50px">
+            	浮雕效果我们在这里分两种效果，其中一种是背景色是暗色，前景色是亮色，另一种是背景色是亮色，而前景色是暗色，
+            </td> 
+        </tr>
+    	<tr>
+        	<td class="desc">背景色是暗色，前景色是亮色</td>
+            <td class="embossing"><h2>Text Embossing(浮雕效果)</h2></td>
+            <td class="desc">背景色是亮色，前景色是暗色</td>
+            <td class="embossing2"><h2>Text Embossing(浮雕效果)</h2></td>
+        </tr>
+        <tr>
+        	<td class="desc">在webkit内核的浏览器中我们可以使用text-stroke来制作文字描边或抽空的效果</td>
+            <td class="stroke"><h2>Stroke Effect(描边效果)</h2></td>
+            <td class="desc">在webkit还有一个text-fill-color制作一种抽空文字的效果</td>
+            <td class="strokeTransparent"><h2>strokeTransparent（抽空）</h2></td>
+        </tr>
+        <tr>
+        	<td class="desc">
+            	Anaglyphic text effect是一种制作透明度叠加的效果，非常类似于浮雕立体的三维效果图像，
+                实现这种办法主要是使用前景色透明度（rgba）和阴影
+            </td>
+            <td class="anaglyphic"><h2>Anaglyphic effect(补色3D效果)</h2></td>
+            <td class="desc">旋转文本主要使用的是transform中的rotate属性来改变文本的方向，从而达到一种旋转文本的效果</td>
+            <td class="rotate"><h2>Rotate Text(旋转文本)</h2></td>
+        </tr>
+        <tr>
+        	<td class="desc">采用上下不同色调，亮色为上，暗色为下</td>
+            <td class="emboss"><h2>Emboss Effect(浮雕效果)</h2></td>
+            <td class="desc">旋转文本主要使用的是transform中的rotate属性来改变文本的方向，从而达到一种旋转文本的效果</td>
+            <td class="blury"><h2>Blury Effect(模糊效果)</h2></td>
+        </tr>
+        
+        <tr>
+        	<td class="desc">在webkit内核的浏览器下，使用background-clip:text可以制作出用背景图片填充文本的效果</td>
+            <td class="backgroundClip"><h2>Background-clip:text(图片填充文字)</h2></td>
+            <td class="desc">
+            	把inset效果和图片填充文字效果结合在一起，我们就可以制作出真正的插图文字效果，
+            	只可惜的是，现在支持这种效果的只有Chrome和Safari（也就是说只有Webkit内核）浏览器支持</td>
+            <td class="trueInset"><h2>True Inset Effect</h2></td>
+        </tr>
+        
+        <tr>
+        	<td class="desc">在webkit内核的浏览器下，使用background-clip:text可以制作出用背景图片填充文本的效果</td>
+            <td class="grungeBG"><h2 class="grunge">纹理文字<span></span></h2></td>
+            <td class="desc">文字渐变效果是使用webkit-mask-image来制作，但这种效果只有Chrome和Safari支持</td>
+            <td class="gradient"><h2><a href="#">Gradient Effect(渐变效果)</a></h2></td>
+        </tr>
+        
+        
+         
+    </table>
+</body>
+</html>

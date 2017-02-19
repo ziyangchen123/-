@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="author" content="shuzhou" />
+<title>jQuery截取文本长度</title>
+<style>
+body {
+	background: #555 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAB9JREFUeNpi/P//PwM6YGLAAuCCmpqacC2MRGsHCDAA+fIHfeQbO8kAAAAASUVORK5CYII=);
+	font: 13px 'Lucida sans', Arial, Helvetica;
+	color: #eee;
+	text-align: center;
+}
+
+div.box
+{
+	width:450px; padding:15px;
+	margin:20px auto 20px auto;
+	background:#444; background:rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+	box-shadow:0 1px 1px rgba(0, 0, 0, 0.4) inset, 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+</style>
+</head>
+<body>
+	<div limit="2" class="box">文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本</div>
+    <div limit="10" class="box">文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本</div>
+    <div limit="20" class="box">文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本</div>
+    <div limit="30" class="box">文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本</div>
+    <div limit="32" class="box">文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本</div>
+</body>
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script>
+$(function() 
+{
+	$(document.body).limit();
+});
+
+
+jQuery.fn.limit=function()
+{
+	var self = $("div[limit]");
+	self.each(function(index, element) 
+	{
+    	var objStr = $(this).text();
+		var objLen = $(this).text().length;
+		var num = $(this).attr("limit");
+		if (objLen > num)
+		{
+			
+			 $(this).text(objStr.substring(0, num) + "..");
+		}   
+    });
+}
+
+</script>
+</html>

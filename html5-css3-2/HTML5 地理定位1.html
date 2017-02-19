@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HTML5 地理定位1</title>
+<script>
+
+var x = document.getElementById("demo");
+
+function getLocation()
+{
+	if (navigator.geolocation)
+	{
+		navigator.geolocation.getCurrentPosition(showPosition(position));
+	}
+	else
+	{
+		x.innerHTML = "你的浏览器不支持地理位置.";
+	}
+}
+function showPosition(position)
+{
+	x.innerHTML = "纬度(Latitude): " + position.coords.latitude + "&nbsp; 经度(Longitude): " + position.coords.longitude;
+}
+</script>
+</head>
+
+<body>
+	<button onclick="getLocation()">获取地理坐标</button>
+	<p id="demo"></p>
+</body>
+</html>

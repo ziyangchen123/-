@@ -1,0 +1,174 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<title>瀑布流效果</title>
+<style type="text/css">
+body
+{
+	background:#eee; font-size:12px;font-family:"宋体"; color:#333p;
+}
+
+div#page
+{ 
+	width:960px;  margin:0 auto; 
+}
+div#main
+{
+	background:#FFF;height: 590px; width:960px;
+}
+div.item
+{
+	float: left; display: inline; padding: 10px; margin: 10px 0px 0 14px; position: relative;
+	border:1px solid rgb(225, 225, 225); background:rgb(245, 245, 245);
+}
+
+	
+@-webkit-keyframes glow 
+{
+	0% {-webkit-box-shadow: 0 0 12px rgba(72, 106, 170, 0.5);border-color: rgba(160, 179, 214, 0.5); }
+	100% {-webkit-box-shadow: 0 0 12px rgba(72, 106, 170, 1.0), 0 0 18px rgba(0, 140, 255, 1.0); border-color: rgba(160, 179, 214, 1.0); }
+}
+@-moz-keyframes glow 
+{
+	0% {-moz-box-shadow: 0 0 12px rgba(72, 106, 170, 0.5);border-color: rgba(160, 179, 214, 0.5); }
+	100% {-moz-box-shadow: 0 0 12px rgba(72, 106, 170, 1.0), 0 0 18px rgba(0, 140, 255, 1.0); border-color: rgba(160, 179, 214, 1.0); }
+}
+img
+{
+	padding:3px; border:1px solid #beceeb; background-color:white;
+	-moz-box-shadow: 0 0 8px rgba(72, 106, 170, 0.5); -webkit-box-shadow: 0 0 8px rgba(72, 106, 170, 0.5);
+	box-shadow: 0 0 8px rgba(72, 106, 170, 0.5);
+}
+img:hover 
+{ 
+	background-color:#f0f3f9;
+	-webkit-animation-name: glow; -webkit-animation-duration: 1s;
+	-webkit-animation-iteration-count: infinite; -webkit-animation-direction: alternate;
+	-webkit-animation-timing-function: ease-in-out;	
+	-moz-animation-name: glow; -moz-animation-duration: 1s;
+	-moz-animation-iteration-count: infinite; -moz-animation-direction: alternate;
+	-moz-animation-timing-function: ease-in-out;	
+}
+span.hbox
+{
+	width:100%; height:0px; background-color:#000; position:absolute; bottom:0; left:0;
+	text-align:center; color:#fff; font-size:16px; font-family:"微软雅黑";
+	font-weight:bolder; letter-spacing:2px; overflow:hidden;
+	filter:alpha(opacity=70);  -moz-opacity:0.7;  -khtml-opacity: 0.7;  opacity: 0.7;
+}
+div#more
+{
+	width: 960px; height: 22px; margin-left: auto; margin-top:15px;
+	margin-right: auto;
+	border:1px solid rgb(190,190,190); cursor: pointer;
+	background-color:rgb(155,155,155); text-align: center; padding-top: 7px;
+	font-size: 14px; color: #aaa;
+	text-shadow:1px 0px 0 rgba(220,220,220,0.9);
+	-webkit-border-radius:3px; -moz-border-radius:3px; -o-border-radius:3px; border-radius:3px;
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 90%, from(rgba(252,252,252, 0.8)), to(rgba(234,234,234, .9)));
+	background-image: -moz-linear-gradient(rgba(252,252,252, 0.8) 0%, rgba(234,234,234, .9) 90%);
+
+}
+div#more:hover
+{
+	border:1px solid rgb(150,150,150); background-color:rgb(122, 122, 122); text-decoration:none;
+	/* -- 文本阴影 渐变 -- */
+	text-shadow:1px 0px 0 rgba(50,50,50,.9);
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 90%, from(rgba(250,250,250, 0.8)), to(rgba(210,210,210, .9)));
+	background-image: -moz-linear-gradient(rgba(250,250,250, 0.8) 0%, rgba(210,210,210, .9) 90%);
+}
+
+div#more:active
+{
+	border:1px solid rgb(150,150,150); background-color:rgb(100, 100, 100); text-decoration:none;
+	/* -- 文本阴影 渐变 -- */
+	text-shadow:1px 0px 0 rgba(50,50,50.9);
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 90%, from(rgba(230,230,230, 0.8)), to(rgba(190,190,190, .9)));
+	background-image: -moz-linear-gradient(rgba(230,230,230, 0.8) 0%, rgba(190,190,190, .9) 90%);
+}
+</style>
+</head>
+<body>
+<div id="page">
+  <div id="main">
+    <div class="item"><a href="#"><img width="180" height="250" src="images/00kih8g.jpg" /></a><span class="hbox"><br/>文字文字文字</span></div>
+	<div class="item"><a href="#"><img width="180" height="280" src="images/1.jpg" /></a><span class="hbox"><br/>文字文字文字</span></div>
+    <div class="item"><a href="#"><img width="180" height="310" src="images/2.jpg" /></a><span class="hbox"><br/>文字文字文字</span></div>
+    <div class="item"><a href="#"><img width="180" height="340" src="images/2rT2vdx.jpg" /></a><span class="hbox"><br/>文字文字文字</span></div>
+    <div class="item"><a href="#"><img width="180" height="370" src="images/3.jpg" /></a><span class="hbox"><br/>文字文字文字</span></div>
+    <div class="item"><a href="#"><img width="180" height="200" src="images/3yiC6Yq.jpg" /></a><span class="hbox"><br/>文字文字文字</span></div>
+    
+    <div class="item"><a href="#"><img width="180" height="190" src="images/4.jpg" /></a><span class="hbox"><br/>文字文字文字</span></div>
+	<div class="item"><a href="#"><img width="180" height="220" src="images/8k3N3EL.jpg" /></a><span class="hbox"><br/>文字文字文字</span></div>
+    <div class="item"><a href="#"><img width="180" height="250" src="images/40Ly3VB.jpg" /></a><span class="hbox"><br/>文字文字文字</span></div>
+    <div class="item"><a href="#"><img width="180" height="280" src="images/bg.jpg" /></a><span class="hbox"><br/>文字文字文字</span></div>
+    <div class="item"><a href="#"><img width="180" height="310" src="images/profilepicture.png" /></a><span class="hbox"><br/>文字文字文字</span></div>
+    <div class="item"><a href="#"><img width="180" height="140" src="images/testC.png" /></a><span class="hbox"><br/>文字文字文字</span></div>
+    
+
+    <div class="item"><a href="#"><img width="180" height="250" src="images/00kih8g.jpg" /></a><span class="hbox"><br/>文字文字文字</span></div>
+	<div class="item"><a href="#"><img width="180" height="280" src="images/1.jpg" /></a><span class="hbox"><br/>文字文字文字</span></div>
+    <div class="item"><a href="#"><img width="180" height="310" src="images/2.jpg" /></a><span class="hbox"><br/>文字文字文字</span></div>
+    <div class="item"><a href="#"><img width="180" height="340" src="images/2rT2vdx.jpg" /></a><span class="hbox"><br/>文字文字文字</span></div>
+    <div class="item"><a href="#"><img width="180" height="370" src="images/3.jpg" /></a><span class="hbox"><br/>文字文字文字</span></div>
+    <div class="item"><a href="#"><img width="180" height="200" src="images/3yiC6Yq.jpg" /></a><span class="hbox"><br/>文字文字文字</span></div>
+    
+    <div class="item"><a href="#"><img width="180" height="190" src="images/4.jpg" /></a><span class="hbox"><br/>文字文字文字</span></div>
+	<div class="item"><a href="#"><img width="180" height="220" src="images/8k3N3EL.jpg" /></a><span class="hbox"><br/>文字文字文字</span></div>
+    <div class="item"><a href="#"><img width="180" height="250" src="images/40Ly3VB.jpg" /></a><span class="hbox"><br/>文字文字文字</span></div>
+    <div class="item"><a href="#"><img width="180" height="280" src="images/bg.jpg" /></a><span class="hbox"><br/>文字文字文字</span></div>
+    <div class="item"><a href="#"><img width="180" height="310" src="images/profilepicture.png" /></a><span class="hbox"><br/>文字文字文字</span></div>
+    <div class="item"><a href="#"><img width="180" height="140" src="images/testC.png" /></a><span class="hbox"><br/>文字文字文字</span></div>
+	<div class='item'><a href='#'><img width='180' height='250' src='images/00kih8g.jpg'/></a><span class='hbox'><br/>文字文字文字</span></div><div class='item'><a href='#'><img width='180' height='280' src='images/1.jpg' /></a><span class='hbox'><br/>文字文字文字</span></div><div class='item'><a href='#'><img width='180' height='310' src='images/2.jpg' /></a><span class='hbox'><br/>文字文字文字</span></div><div class='item'><a href='#'><img width='180' height='340' src='images/2rT2vdx.jpg' /></a><span class='hbox'><br/>文字文字文字</span></div><div class='item'><a href='#'><img width='180' height='370' src='images/3.jpg' /></a><span class='hbox'><br/>文字文字文字</span></div><div class='item'><a href='#'><img width='180' height='200' src='images/3yiC6Yq.jpg' /></a><span class='hbox'><br/>文字文字文字</span></div><div class='item'><a href='#'><img width='180' height='190' src='images/4.jpg' /></a><span class='hbox'><br/>文字文字文字</span></div><div class='item'><a href='#'><img width='180' height='220' src='images/8k3N3EL.jpg' /></a><span class='hbox'><br/>文字文字文字</span></div><div class='item'><a href='#'><img width='180' height='250' src='images/40Ly3VB.jpg' /></a><span class='hbox'><br/>文字文字文字</span></div><div class='item'><a href='#'><img width='180' height='280' src='images/bg.jpg' /></a><span class='hbox'><br/>文字文字文字</span></div><div class='item'><a href='#'><img width='180' height='310' src='images/profilepicture.png' /></a><span class='hbox'><br/>文字文字文字</span></div><div class='item'><a href='#'><img width='180' height='140' src='images/testC.png' /></a><span class='hbox'><br/>文字文字文字</span></div>"
+		
+
+  </div>
+</div>
+<!-- 
+	<div id="more">更多</div>
+ -->
+</body>
+<script src="js/jquery-1.6.1.js"></script>
+<script src="js/jquery.masonry.min.js"></script>
+<script>
+$(function()
+{
+    var $container = $('#main');
+    $container.imagesLoaded( function()
+	{
+      $container.masonry(
+	  {
+        itemSelector : '.item'
+      });
+    });
+	
+	$('.item').mouseover(function()
+	{
+		$(this).find('span').stop().animate({height:'100%'}, 520);
+	});
+	$('.item').mouseout(function()
+	{
+		$(this).find('span').stop(true).animate({height:'0px'}, 520);
+	});
+	
+	$('#more').click(function() 
+	{
+		
+		var moreStr = "<div class='item'><a href='#'><img width='180' height='250' src='images/00kih8g.jpg'/></a><span class='hbox'><br/>文字文字文字</span></div><div class='item'><a href='#'><img width='180' height='280' src='images/1.jpg' /></a><span class='hbox'><br/>文字文字文字</span></div><div class='item'><a href='#'><img width='180' height='310' src='images/2.jpg' /></a><span class='hbox'><br/>文字文字文字</span></div><div class='item'><a href='#'><img width='180' height='340' src='images/2rT2vdx.jpg' /></a><span class='hbox'><br/>文字文字文字</span></div><div class='item'><a href='#'><img width='180' height='370' src='images/3.jpg' /></a><span class='hbox'><br/>文字文字文字</span></div><div class='item'><a href='#'><img width='180' height='200' src='images/3yiC6Yq.jpg' /></a><span class='hbox'><br/>文字文字文字</span></div><div class='item'><a href='#'><img width='180' height='190' src='images/4.jpg' /></a><span class='hbox'><br/>文字文字文字</span></div><div class='item'><a href='#'><img width='180' height='220' src='images/8k3N3EL.jpg' /></a><span class='hbox'><br/>文字文字文字</span></div><div class='item'><a href='#'><img width='180' height='250' src='images/40Ly3VB.jpg' /></a><span class='hbox'><br/>文字文字文字</span></div><div class='item'><a href='#'><img width='180' height='280' src='images/bg.jpg' /></a><span class='hbox'><br/>文字文字文字</span></div><div class='item'><a href='#'><img width='180' height='310' src='images/profilepicture.png' /></a><span class='hbox'><br/>文字文字文字</span></div><div class='item'><a href='#'><img width='180' height='140' src='images/testC.png' /></a><span class='hbox'><br/>文字文字文字</span></div>";
+		
+		<!-- $('#main').append(moreStr); -->
+		var $container = $('#main');
+		$container.imagesLoaded( function()
+		{
+		  $container.masonry(
+		  {
+			itemSelector : '.item'
+		  });
+		});
+	});
+	
+});
+ 
+</script>
+</html>

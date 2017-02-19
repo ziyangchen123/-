@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>搜索框样式</title>
+	
+<style type="text/css">
+body {
+	background: #555 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAB9JREFUeNpi/P//PwM6YGLAAuCCmpqacC2MRGsHCDAA+fIHfeQbO8kAAAAASUVORK5CYII=);
+	font: 13px 'Lucida sans', Arial, Helvetica;
+	color: #eee;
+	text-align: center;
+}
+.wf:before, .wf:after
+{
+	content:""; display:table;
+}
+
+.wf:after
+{
+	clear:both;
+}
+.wf
+{
+	zoom:1;
+}
+.wrapper
+{
+	width:450px; padding:15px;
+	margin:150px auto 50px auto;
+	background:#444; background:rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+	box-shadow:0 1px 1px rgba(0, 0, 0, 0.4) inset, 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+.wrapper input
+{
+	width:330px; height:20px; padding:10px 5px;
+	float:left;  font: bold 15px 'lucida sans', 'trebuchet MS', 'Tahoma';
+	border:0 none; background:#eee;
+	border-radius:3px 0 0 3px;
+}
+.wrapper input:focus
+{
+	outline:0; background:#fff;
+	box-shadow:0 0 2px rgba(0,0,0,.8) inset;
+}
+    
+.wrapper input:-webkit-input-placeholder
+{
+	color: #999; font-weight: normal; font-style: italic;
+}
+.wrapper input:-moz-placeholder 
+{
+	color: #999; font-weight: normal; font-style: italic;
+}
+.wrapper input:-ms-input-placeholder 
+{
+	color: #999; font-weight: normal; font-style: italic;
+}    
+.wrapper button
+{
+	overflow:visible; position:relative; float:right;
+	border:0 none; cursor:pointer; height:40px; width:110px;
+	font: bold 15px/40px 'lucida sans', 'trebuchet MS', 'Tahoma';
+	color:#fff; text-transform:uppercase; background:#d83c3c;
+	border-radius: 0 3px 3px 0; text-shadow:0 -1px 0 rgba(0, 0, 0, 0.3);
+}
+.wrapper button:hover
+{
+	background:#e54040;
+}
+.wrapper button:active, .wrapper button:focus
+{
+	background: #c42f2f;
+}
+
+.wrapper button:before
+{
+	content: ''; position: absolute;
+	border-width: 8px 8px 8px 0;
+	border-style: solid solid solid none;
+	border-color: transparent #d83c3c transparent;
+	top: 12px; left: -6px;
+}
+
+.wrapper button:hover:before
+{
+	border-right-color: #e54040;
+}
+.wrapper button:focus:before
+{
+	border-right-color: #c42f2f;
+}    
+.wrapper button::-moz-focus-inner 
+{
+	border: 0; padding: 0;
+}
+</style>
+</head>
+<body>
+    <form class="wrapper wf">
+        <input type="text" placeholder="Search here..." required>
+        <button type="submit">Search</button>
+    </form>
+</div>
+</body>
+</html>
