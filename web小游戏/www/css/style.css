@@ -1,0 +1,63 @@
+/* Empty. Add your own CSS if you like */
+*{
+	margin: 0;
+	padding: 0;
+}
+div#youxi{
+	width: 100%;
+	height: 100%;
+	background: #FFE87C;
+}
+div#content{
+	position: absolute;
+	top: 30%;
+	left: 5%;
+	width: 100%;
+	height: 55%;
+}
+#score{
+	position: absolute;
+	top: 20%;
+	background: #FF8040;
+	
+}
+
+a.button{
+	background: #FFE87C;
+	
+	margin-top: 15%;
+	border: 1px solid #FF8040;
+	border-radius: 3px;
+	background: #FF8040;
+	width: 15%;
+	position: relative;
+	margin-left: 5%;
+	left: 5%;
+
+}
+a.button:visited{
+	color: #fff;
+}
+	
+div#content table{
+background-color: #827B60;
+border:#666666;
+font-size:48px;
+width: 90%;
+height: 80%;
+
+
+border-radius: 3px;
+
+}
+div#content table tr td{
+	width: 20%;
+	height: 20%;
+	background: #786d5f;
+	text-align: center;
+	color: #fff;
+	font-size: 25px;
+	
+	
+}
+	

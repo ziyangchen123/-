@@ -1,0 +1,39 @@
+<link rel="stylesheet" type="text/css" href="css/tanshishe.css">
+<link rel="stylesheet" type="text/css" href="css/mui.min.css">
+
+<ion-view view-title="Chats" ng-controller="load">
+     <div class="container"> 
+     <button id="starts" class="button " ng-click="reloadRoute()">开始游戏</button>
+    <button id="refresh" class="button button-icon icon ion-refresh" ></button>
+    <div id="mark" class="row">得分：<span id="mark_con" class="label label-default"></span>
+    </div>
+   </div>
+    <div class="row">
+      <div class="col" id="yard">
+        <canvas id="canvas" height="600" width="800"></canvas>
+      </div>
+    </div>
+   </div>
+   <div id="helper">
+                <table>
+                    <tr>
+                        <td></td>
+                        <td><button  class="mui-btn mui-fab mui-btn-primary" onclick="keyDown(38);">上</button></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><button class="mui-btn mui-fab mui-btn-primary" onclick="keyDown(37);">左</button></td>
+                        <td><button class="mui-btn mui-fab mui-btn-primary" onclick="keyDown(32);" id="pause">暂停</button></td>
+                        <td><button class="mui-btn mui-fab mui-btn-primary" onclick="keyDown(39);">右</button></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><button class="mui-btn mui-fab mui-btn-primary" onclick="keyDown(40);">下</button></td>
+                        <td></td>
+                    </tr>
+                
+            </div>
+</ion-view>
+<script type="text/javascript" src="js/tanchishe.js"></script>
+
+

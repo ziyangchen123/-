@@ -1,0 +1,36 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	width: 90%
+	height:80%;
+	font-size: 100%;
+}
+div#yard{
+	
+	width: 90%;
+	height: 85%;
+	position: absolute;
+	left: 5%;
+
+}
+canvas{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+button#starts{
+	position: absolute;
+	right: 0;
+}
+div#helper{
+	position: absolute;
+	top: 60%;
+	left: 40%;
+	opacity: 0.5;
+}
+button#refresh{
+	position: absolute;
+	left: 40%;
+}

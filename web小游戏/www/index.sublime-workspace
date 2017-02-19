@@ -1,0 +1,428 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"clo",
+				"color"
+			],
+			[
+				"border",
+				"border-bottom"
+			],
+			[
+				"b",
+				"bottom"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"li",
+				"line-height"
+			],
+			[
+				"pa",
+				"padding-left"
+			],
+			[
+				"re",
+				"repeat-x"
+			],
+			[
+				"img",
+				"images"
+			],
+			[
+				"no",
+				"no-repeat"
+			],
+			[
+				"ma",
+				"margin-left"
+			],
+			[
+				"text",
+				"text-indent"
+			],
+			[
+				"get",
+				"getElementsByTagName"
+			],
+			[
+				"pad",
+				"padding-top"
+			],
+			[
+				"tex",
+				"text-indent"
+			],
+			[
+				"im",
+				"images"
+			],
+			[
+				"play",
+				"player"
+			],
+			[
+				"list",
+				"list-style-type"
+			],
+			[
+				"fl",
+				"float"
+			],
+			[
+				"add",
+				"addBanana"
+			],
+			[
+				"fo",
+				"foodCtrl"
+			],
+			[
+				"food",
+				"foodCtrl"
+			],
+			[
+				"foo",
+				"food"
+			],
+			[
+				"di",
+				"div"
+			],
+			[
+				"c",
+				"Ctrl"
+			],
+			[
+				"las",
+				"lastname"
+			],
+			[
+				"a",
+				"Address"
+			],
+			[
+				"is",
+				"ischecked"
+			],
+			[
+				"use",
+				"User"
+			],
+			[
+				"u",
+				"User"
+			],
+			[
+				"sc",
+				"scope"
+			],
+			[
+				"Ctr",
+				"Ctrl"
+			],
+			[
+				"tas",
+				"tasks"
+			],
+			[
+				"en",
+				"EventUtil"
+			],
+			[
+				"inser",
+				"insertCell"
+			],
+			[
+				"crea",
+				"createText"
+			],
+			[
+				"inse",
+				"insertCell"
+			],
+			[
+				"cre",
+				"createTextNode"
+			],
+			[
+				"cell",
+				"cell4"
+			],
+			[
+				"cel",
+				"cell4"
+			],
+			[
+				"ce",
+				"cell2"
+			],
+			[
+				"ch",
+				"childNodes"
+			],
+			[
+				"ti",
+				"time"
+			],
+			[
+				"doc",
+				"documentElement"
+			],
+			[
+				"scr",
+				"screenLeft"
+			],
+			[
+				"top",
+				"topFrame"
+			],
+			[
+				"fra",
+				"frames"
+			],
+			[
+				"fr",
+				"frameset\tTag"
+			],
+			[
+				"va",
+				"value"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"in",
+				"input\tTag"
+			],
+			[
+				"type",
+				"typeof"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"for",
+				"for\tfor (…) {…}"
+			],
+			[
+				"p",
+				"padding"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"lis",
+				"list-style-type"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/chen/Desktop/web/素材/项目5：画飘香/style/basic.css",
+		"/C/Users/chen/Desktop/web/项目5：画飘香/index.html",
+		"/C/Users/chen/Desktop/web/项目5：画飘香/style/basic.css",
+		"/C/Program Files/nodejs/node_modules/npm/npmrc",
+		"/C/Users/chen/Desktop/web/项目4：音乐频道/index.html",
+		"/C/Users/chen/Desktop/web/素材/项目5：画飘香/index.html",
+		"/C/Users/chen/Desktop/web/项目5：画飘香/banner.js",
+		"/C/Users/chen/Desktop/web/素材/项目4：音乐频道/style/basic.css",
+		"/C/Users/chen/Desktop/web/项目4：音乐频道/style/basic.css",
+		"/C/Users/chen/Desktop/web/项目4：音乐频道/panel.js",
+		"/C/Users/chen/Desktop/web/素材/项目4：音乐频道/flv.js",
+		"/C/Users/chen/Desktop/web/项目4：音乐频道/dd.html",
+		"/C/Users/chen/Desktop/web/素材/项目4：音乐频道/index.html",
+		"/C/Users/chen/Desktop/web/项目3：温州广厦/index.html",
+		"/C/Users/chen/Desktop/web/Angular/AngularJS's-introduction/AngularJS入门/源码包/login.html",
+		"/C/Users/chen/Desktop/web/Angular/AngularJS's-introduction/AngularJS入门/源码包/msg.php",
+		"/C/Users/chen/Desktop/web/Angular/AngularJS's-introduction/AngularJS入门/源码包/ajax.html",
+		"/C/Users/chen/Desktop/web/Angular/AngularJS's-introduction/AngularJS入门/源码包/test.html",
+		"/C/Users/chen/Desktop/web/Angular/AngularJS's-introduction/AngularJS入门/源码包/msg.js",
+		"/C/Users/chen/Desktop/web/Angular/AngularJS's-introduction/AngularJS入门/源码包/msg.json",
+		"/C/Users/chen/Desktop/web/js小项目/test.html",
+		"/C/Users/chen/Desktop/web/js小项目/test.htm",
+		"/C/Users/chen/Desktop/web/js小项目/js.js",
+		"/C/Users/chen/Desktop/web/Angular/AngularJS's-introduction/AngularJS入门/源码包/index.html",
+		"/C/Users/chen/Desktop/web/Angular/AngularJS's-introduction/AngularJS入门/源码包/关于service.html",
+		"/C/Users/chen/Desktop/web/Angular/AngularJS's-introduction/AngularJS入门/源码包/css/foundation.min.css",
+		"/C/Users/chen/Desktop/test.htm"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"#top",
+			"top",
+			"data",
+			"createText",
+			"link"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"myProvider",
+			"createTextNode",
+			"styele"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "index.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
