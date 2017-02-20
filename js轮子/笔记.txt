@@ -1,0 +1,8 @@
+1.documeny.getElementById("x").style.xx 只能获取style里面设置的样式；
+  runtimeStyle可以获取运行时的样式
+  currentStyle：runtimeStyle+style  只能用在IE  documeny.getElementById("x").currentStyle["xx"]
+  getcomputedStyle: 基本都可以用；window.getcomputedStyle(object,null)["xx"]
+
+2.settimeout（中关于匿名函数）  setInterval 
+
+3

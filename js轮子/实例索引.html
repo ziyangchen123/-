@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			background: #000;
+		}
+#box{position:absolute;width:300px;height:150px;background:#333;border:2px solid #ccc;top:50%;left:50%;margin:-75px 0 0 -150px;}
+
+		#box span.huifang{
+			border:2px solid #fff;
+			display: block;
+			width: 100%;
+			height: 32px;
+			line-height: 32px;
+			text-align: right;
+			cursor: move;
+
+		}
+		#box span.huifang a{
+			text-decoration: none;
+			color:#fff;
+		}
+		#box 
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			var oBox=document.getElementsByTagName('div')[0];
+			var drag=document.getElementsbyTagName("span");
+			var rev=document.getElementsbyTagName("a");
+			var bDrag=false;
+			var iX=iY=0;
+			var pop=[{x:oBox.offsetLeft, y:oBox.offsetTop}]
+
+			drag[0].onmousedown=function(event){
+				event=event || window.event;
+				bDrag=true;
+				iX=event.clientX - oBox.offsetLeft;
+				iY=event.clientY - oBox.offsetTop;
+
+				pop.push({x:oBox.offsetLeft, y:oBox.offsetTop})
+		
+				this.setCapture && this.setCapture();
+		
+				return false
+
+			};
+
+
+		}
+	</script>
+</head>
+<body>
+ <div id="box">
+ 	<span class="huifang"><a href="#">click me!</a></span>
+ 	<p><strong>Drag:</strong><span></span></p>
+    <p><strong>offsetTop:</strong><span></span></p>
+    <p><strong>offsetLeft:</strong><span></span></p>
+
+ </div>
+</body>
+</html>

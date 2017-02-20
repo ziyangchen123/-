@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+<title>5.18-CSS3制作3D动画悬浮效果实例</title>
+<style type="text/css">
+*{margin:0;
+padding:0;}
+body{font:12px/1.5 Tahoma;text-align: center;}
+
+dl{margin: 10px auto;
+   width:120px;
+   border:1px solid #000;
+	border-radius: 4px;
+	background: #ffc;
+	padding: 10px;
+
+	}
+	p{margin-top:10px;}
+
+	dt{padding-bottom:10px;border-bottom:1px solid #666;}
+
+</style>
+<script>
+	window.onload=function(){
+		var che=document.getElementsByTagName("input");
+		var lab=document.getElementsByTagName("label")[0];
+		var hre=document.getElementsByTagName("a")[0];
+		function CheckAll(){
+			for (var i = 1,n=0; i < che.length; i++){
+				che[i].checked&&n++;
+			}
+				che[0].checked= n==che.length-1;
+				lab.innerHTML=che[0].checked ? "全不选":"全选";
+		};
+		che[0].onclick=function(){
+			for (var i = 1; i < che.length; i++){
+				che[i].checked=this.checked;
+			}
+			CheckAll();
+		};
+		hre.onclick=function(){
+			for (var i = 1; i < che.length; i++) {
+				che[i].checked=!che[i].checked;
+			}
+			CheckAll();
+		};
+		for (var i = 1; i < che.length; i++) {
+				che[i].onclick=function(){
+					CheckAll();
+				}
+			}	
+			
+}
+	
+	
+</script>
+</head>
+
+<body>
+<dl>
+    <dt><input type="checkbox" id="checkAll" /><label>全选</label><a href="javascript:;">反选</a></dt>
+    <dd>
+        <p><input type="checkbox" name="item" /><label>选项（一）</label></p>
+        <p><input type="checkbox" name="item" /><label>选项（二）</label></p>
+        <p><input type="checkbox" name="item" /><label>选项（三）</label></p>
+        <p><input type="checkbox" name="item" /><label>选项（四）</label></p>
+        <p><input type="checkbox" name="item" /><label>选项（五）</label></p>
+        <p><input type="checkbox" name="item" /><label>选项（六）</label></p>
+        <p><input type="checkbox" name="item" /><label>选项（七）</label></p>
+        <p><input type="checkbox" name="item" /><label>选项（八）</label></p>
+        <p><input type="checkbox" name="item" /><label>选项（九）</label></p>
+        <p><input type="checkbox" name="item" /><label>选项（十）</label></p>
+    </dd>    
+</dl>
+<center>1、切换全选/全不选文字；2、根据选中个数更新全选框状态；</center>
+</body>
+
+
+
+</html>
+

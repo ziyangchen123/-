@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+<title>5.18-CSS3制作3D动画悬浮效果实例</title>
+<style type="text/css">
+*{margin:0;
+padding:0;}
+body{color:#999;font:12px/1.5 Tahoma;}
+
+#outer{width:200px;border:1px solid #aaa;margin:10px auto;position: relative;}
+
+
+#outer h2{
+
+	color:#57646E;font-size:14px;font-weight:400;border:1px solid;height:30px;line-height:30px;padding-left:10px;background:#ced3d7;
+	border-color:#fff #e9edf2;
+	
+}
+ul{
+	list-style-type: none;
+	padding: 10px;
+		
+}
+ul a{
+	display: block;
+	text-decoration: none;
+
+}
+ul a.current{
+	text-decoration: underline;
+	background: #ced3d7;
+}
+#wei{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	right: 5%;
+	top: 10%;
+}
+#outer h2:after{
+	content: "";
+	width: 0;
+	height: 0;
+	border-width:  6px;
+	border-style: solid;
+	border-color: black transparent transparent transparent; 
+	position: relative;
+	left: 100px;
+	top: 15px;
+	
+	cursor: pointer;
+
+}
+#outer.close h2:after{
+	content: "";
+	display: block;
+	width: 0;
+	height: 0;
+	border-width:  6px;
+	border-style: solid;
+	border-color: transparent transparent black transparent; 
+	position: relative;
+	left: 170px;
+	top: -20px;
+	cursor: pointer;
+
+}
+
+</style>
+<script>
+	window.onload=function(){
+	
+	var x=document.getElementById("outer");
+	var z=document.getElementById("but");
+	var y=document.getElementById("wei");
+	var t=document.getElementsByTagName("a");
+	var h=document.getElementsByTagName("ul")[0];
+	y.onclick=function(){
+		x.className= x.className=="" ? "close":"";
+		h.style.display= h.style.display=="none"? "block":"none"; 
+
+	}
+	for (var i = 0; i<t.length; i++) {
+		t[i].onmouseover =function(){
+			this.className="current";
+		
+		
+		}
+	t[i].onmouseout=function(){
+			this.className="";}
+		
+	}
+	}
+
+</script>
+</head>
+
+<body>
+
+
+
+<div id="outer">
+
+	 <h2>播放列表...</h2>
+	<div id="wei"></div>
+    <ul>
+        <li><a href="javascript:;">玩家之徒 - 蔡依林</a></li>
+        <li><a href="javascript:;">原谅我就是这样的女生 - 戴佩妮</a></li>
+        <li><a href="javascript:;">猜不透 - 丁当</a></li>
+        <li><a href="javascript:;">自导自演 - 周杰伦</a></li>
+        <li><a href="javascript:;">浪漫窝 - 弦子</a></li>
+        <li><a href="javascript:;">流年 - 王菲</a></li>
+    </ul>
+
+</div>
+</body>
+</html>
+

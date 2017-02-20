@@ -1,0 +1,96 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>自动播放——幻灯片效果</title>
+<style>
+body,div,ul,li{margin:0;padding:0;}
+ul{list-style-type:none;}
+body{background:#000;text-align:center;font:12px/20px Arial;}
+#box{overflow: hidden;width: 492px;height: 172px;position: relative;margin:10px auto;border:8px solid #fff;border-radius: 2px;background: #fff;}
+#box ul.list{position: relative;width: 490px;height: 170px;border:1px solid #000;overflow: hidden;}
+#box ul.list li{position: absolute;top: 0;left: 0;opacity: 0;filter: alpha(opacity=0) ;}
+#box ul.list li.current{opacity: 1;filter: alpha(opacity=100);}
+#box ul.count{position: absolute;right: 10px;bottom: 10px;}
+#box ul.count li{float: left;width: 20px;height: 20px;border-radius: 20px;color: #fff;margin-right:5px;overflow:hidden;background:#F90;cursor: pointer;opacity:0.7;filter: alpha(opacity=70);}
+#box ul.count li.current{opacity: 1;filter: alpha(opacity=100);font-weight: 700;background: #f60;}
+#tmp{width:100px;height:100px;background:red;position:absolute;}
+
+</style>
+<script type="text/javascript">
+window.onload=function(){
+	var oBx=document.getElementById("box");
+	var oul=document.getElementsByTagName("ul");
+	var listli=oul[0].getElementsByTagName("li");
+	var countli=oul[1].getElementsByTagName("li");
+	var index=0;
+	var timer=play=null;
+	var alpha=0;
+	var order=true;
+	for (var i = 0; i < countli.length; i++) {
+		countli[i].index=i;
+		countli[i].onmouseover=function(){
+			show(this.index);
+		}
+	};
+	oBx.onmouseover=function(){
+		clearInterval(play);
+	};
+	oBx.onmouseout=function(){
+		autplay();
+	};
+	
+
+	function autplay(){ 
+		play=setInterval(function(){
+		 order ? index++ : index--;
+		 index>=listli.length && (index=listli.length-2,order=false);
+		 index<=0 && (index=0,order=true);
+		show(index);
+	},2000)}
+	autplay();
+function show(a)
+{
+	index=a;
+	for (var i = 0; i < countli.length; i++) {
+		countli[i].className="";
+
+	}
+	countli[a].className="current";
+	clearInterval(timer);
+
+	for (var i = 0; i < listli.length; i++) {
+		listli[i].style.opacity=0;
+		listli[i].style.filter="alpha(opacity=100)";
+	}
+	timer=setInterval(function(a){
+		alpha+=2;
+		alpha>100 && (alpha=0);
+		listli[index].style.opacity=alpha/100;
+		listli[index].style.filter="alpha(opacity="+alpha+")";
+		alpha==100 && clearInterval(timer);
+	},20)
+}
+}
+</script>
+</head>
+<body>
+<div id="box">
+    <ul class="list">
+        <li class="current"><img src="01.jpg" width="490" height="170" /></li>
+        <li><img src="02.jpg" width="490" height="170" /></li>
+        <li><img src="01.jpg" width="490" height="170" /></li>
+        <li><img src="02.jpg" width="490" height="170" /></li>
+        <li><img src="01.jpg" width="490" height="170" /></li>
+    </ul>
+    <ul class="count">
+        <li class="current">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+</div>
+</body>
+</html>

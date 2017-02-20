@@ -1,0 +1,64 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>跟随鼠标移动（大图展示）</title>
+<style type="text/css">
+html,body{overflow:hidden;}
+body,div,ul,li{margin:0;padding:0;}
+#box ul{overflow: hidden;width: 768px;height:172px;list-style-type: none;margin: 10px auto;}
+#box ul li{float: left;margin: 0 10px;display:inline;border:1px solid #ddd;width: 170px;height: 170px;cursor: pointer;}
+#box ul li.active{border:1px solid #a10000;}
+#box li img{width: 170px;height: 170px;vertical-align: top;}
+#big{position: absolute;width: 400px;height: 400px;border:2px solid #ddd;display: none;}
+#big div{position: absolute;top: 0;left: 0;width: 400px;height: 400px;opacity: 0.5;filter: alpha(opacity=50);background: #fff;}
+</style>
+<script type="text/javascript">
+window.onload = function ()
+{
+	var aLi=document.getElementsByTagName('li');
+	var oBig=document.getElementById('big');
+	var oLoading=oBig.getElementsByTagName("div")[0];
+	var i=0;
+	
+		for (var i = 0; i < aLi.length; i++) {
+			aLi[i].index=i;
+			aLi[i].onmouseover =function(){
+			var omg=document.createElement("img");
+			var img=new Image();
+			omg.src=img.src=aLi[this.index].getElementsByTagName("img")[0].src.replace(".jpg","_big.jpg")
+			oBig.appendChild(omg);
+			this.className = "active";
+			oBig.style.display=oLoading.style.display="block"
+			img.conplete ? oLoading.style.display="none" : (omg.onload=function(){oLoading.style.display="none";})
+		};
+		aLi[i].onmousemove=function(event){
+		var event=event||window.event;
+		var iWidth=document.documentElement.offsetWidth-event.clientX;
+		oBig.style.top=event.clientY+20+"px";
+		oBig.style.left=(iWidth < oBig.offsetWidth + 10 ? event.clientX - oBig.offsetWidth-10 : event.clientX+10)+"px";
+
+	};
+	aLi[i].onmouseout=function(){
+		this.className="";
+		oBig.style.display="none";
+		oBig.removeChild(oBig.lastChild);
+	}
+	}
+	
+};
+</script>
+</head>
+<body>
+<div id="box">
+    <ul>
+    	<li><img src="shirt_1.jpg" /></li>
+        <li><img src="shirt_1.jpg" /></li>
+        <li><img src="shirt_1.jpg" /></li>
+        <li><img src="shirt_1.jpg" /></li>
+    </ul>
+</div>
+<div id="big"><div></div></div>
+</body>
+</html>
