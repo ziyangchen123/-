@@ -1,0 +1,12 @@
+angular.module('app').directive('appSheet',function(){
+	return{
+		restrict:'A',
+		replaec:true,
+		templateUrl:'view/template/sheet.html',
+		scope:{
+			list:'=',
+			visible:'=',
+			select:'&'
+		}
+	};
+})

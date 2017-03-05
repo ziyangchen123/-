@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html  >
+<head>
+	<title></title>
+<script type="text/javascript" src="vender/angular/angular.js"></script>
+</head>
+<body>
+<div ng-app="MyApp">
+    <div ng-controller="MyController">
+        <label for="flag">成功
+        <input id="flag" type="checkbox" ng-model="flag" /><br/>
+        </label>
+        <div ng-cloak>
+            {{status}}
+        </div>
+        <hr/>
+        <button ng-click="handle()">点击我</button>
+    </div>
+</div>
+<script type="text/javascript">
+	        angular.module("MyApp", [])
+        .controller("MyController", ["$scope", "$q", function ($scope, $q) {
+            $scope.flag = true;
+            $scope.handle = function () {
+            var deferred = $q.defer();
+            var promise = deferred.promise;
+
+            promise.then(function (result) {
+                result = result + "you have passed the first then()";
+                $scope.status = result;
+                return result;
+            }, function (error) {
+                error = error + "failed but you have passed the first then()";
+                $scope.status = error;
+                return error;
+            }).then(function (result) {
+                alert("Success: " + result);
+            }, function (error) {
+                alert("Fail: " + error);
+            })
+
+            if ($scope.flag) {
+                deferred.resolve("you are lucky!");
+            } else {
+                deferred.reject("sorry, it lost!");
+            }
+        }
+}]);
+
+
+</script>
+</body>
+</html>

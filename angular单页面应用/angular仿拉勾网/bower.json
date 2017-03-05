@@ -1,0 +1,26 @@
+{
+  "name": "webapp",
+  "authors": [
+    "ywchen <ziyangchen123>"
+  ],
+  "description": "angularjs webapp",
+  "main": "",
+  "keywords": [
+    "angularjs"
+  ],
+  "license": "mit",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.5.8",
+    "angular-ui-router": "ui-router#^0.4.2",
+    "angular-cookies": "1.5.8",
+    "angular-validation": "^1.4.3"
+  }
+}
