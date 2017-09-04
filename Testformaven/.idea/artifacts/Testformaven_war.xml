@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Testformaven:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="Testformaven.war">
+      <element id="artifact" artifact-name="Testformaven:war exploded" />
+    </root>
+  </artifact>
+</component>
